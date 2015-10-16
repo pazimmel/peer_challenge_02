@@ -2,7 +2,12 @@
 .userContainer {
 	display: inline-block;
 	border: 2px solid;
-	margin-right: 50px;
+	margin: 0 50px 0 0;
 	width:100px;
 	text-align: center;
+}
+
+#quote {
+	margin: 20px 0 0 20px;
+	font-style: italic;
 }

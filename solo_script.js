@@ -6,26 +6,30 @@ var Atticus = {
   name: "Atticus", 
   number: "2405", 
   salary: "47000",
-  rating: 3
+  rating: 3,
+  quote: "You never really understand a person until you consider things from his point of view … until you climb into his skin and walk around in it."
 };
 
 var Jem = {
   name: "Jem", 
   number: "62347", 
   salary: "63500",
-  rating: 4
+  rating: 4,
+  quote: "Attticus is a gentleman, just like me!"
 };
 var Boo = {
   name: "Boo", 
   number: "11435",
   salary: "54000",
-  rating: 3
+  rating: 3,
+  quote: "Will you take me home?"
 };
 var Scout = {
   name: "Scout", 
   number: "6243", 
   salary: "74750",
-  rating: 5
+  rating: 5,
+  quote: "You take that back!"
 }; //declare variables
 
 var array = [Atticus, Jem, Boo, Scout];
@@ -100,8 +104,10 @@ var employeeObject = {
 $(document).ready(function(){
 
   $("#container").on('click', '.someButton',function(){
+    var quoter;
     console.log($(this).closest('.userContainer').find('p').first().text());
-    
+    quoter = eval($(this).closest('.userContainer').find('p').first().text());
+    $("#quote").children("p").text(quoter.quote);
   });
 
 
